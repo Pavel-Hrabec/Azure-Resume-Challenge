@@ -1,6 +1,6 @@
 /e/AzureCloudChallenge/Azure-Resume-Challenge/Terraform/Credentials
 # Local .terraform directories
-**/.terraform/*
+/e/AzureCloudChallenge/Azure-Resume-Challenge/Terraform/**/.terraform/*
 
 # Crash log files
 crash.log
