@@ -1,3 +1,5 @@
+# This will be used to deploy infrastructure for Azure Cloud Resume Challenge
+
 terraform {
   required_providers {
     azurerm = {

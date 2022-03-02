@@ -1,2 +1,2 @@
-resourceGroupName = "rg-Terraform"
+resourceGroupName = "Cloud-Resume-Challenge"
 location = "eastus"
