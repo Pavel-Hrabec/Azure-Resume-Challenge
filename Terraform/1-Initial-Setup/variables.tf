@@ -1,9 +1,14 @@
-variable "resourceGroupName" {
+variable "resource_group_name" {
     type = string
-    description = "name of resource group"
 }
 
-variable "location" {
+variable "resource_group_location" {
     type = string
-    description = "location of your resource group"
+}
+
+variable "cosmos_db_account_name" {
+    type = string
+}
+variable "failover_location" {
+    type = string
 }
