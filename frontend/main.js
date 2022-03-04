@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) =>{ // Everytime content is 
     getVisitCount();
 })
 
-const functionApiUrl = '';
+const functionApiUrl = 'http://localhost:7071/api/GetResCounter';
 // const localFunctionApi = 'http://localhost:7071/api/GetResumeCounter';
 
 const getVisitCount = () => {
