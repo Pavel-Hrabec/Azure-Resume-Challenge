@@ -1,0 +1,6 @@
+E:\AzureCloudChallenge\Azure-Resume-Challenge\backend\tests\bin\Debug\net5.0\CoverletSourceRootsMapping
+E:\AzureCloudChallenge\Azure-Resume-Challenge\backend\tests\obj\Debug\net5.0\tests.csproj.AssemblyReference.cache
+E:\AzureCloudChallenge\Azure-Resume-Challenge\backend\tests\obj\Debug\net5.0\tests.GeneratedMSBuildEditorConfig.editorconfig
+E:\AzureCloudChallenge\Azure-Resume-Challenge\backend\tests\obj\Debug\net5.0\tests.AssemblyInfoInputs.cache
+E:\AzureCloudChallenge\Azure-Resume-Challenge\backend\tests\obj\Debug\net5.0\tests.AssemblyInfo.cs
+E:\AzureCloudChallenge\Azure-Resume-Challenge\backend\tests\obj\Debug\net5.0\tests.csproj.CoreCompileInputs.cache
