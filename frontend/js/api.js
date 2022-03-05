@@ -8,7 +8,7 @@ const localfunctionApiUrl = 'http://localhost:7071/api/GetResCounter';
 
 const getVisitCount = () => {
     let count = 30;
-    fetch(localfunctionApiUrl).then(response => { // fetch will get data supplied by API fuction, once you do that, grab the response and 
+    fetch(functionApiUrl).then(response => { // fetch will get data supplied by API fuction, once you do that, grab the response and 
         return response.json() // return it json
     }).then(response =>{ // grab the response in json 
         console.log("Website called function API."); //log for debugging, just in case
