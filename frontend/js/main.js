@@ -1,316 +1,299 @@
 /* ===================================================================
- * Ethos 1.0.0 - Main JS
+ * Ceevee 2.0.0 - Main JS
  *
  * ------------------------------------------------------------------- */
 
-(function($) {
+(function(html) {
 
     "use strict";
     
-    const cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : ''   // mailchimp url
-                };
-    const $WIN = $(window);
+    html.className = html.className.replace(/\bno-js\b/g, '') + ' js ';
 
 
-    // Add the User Agent to the <html>
-    // will be used for IE10/IE11 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; rv:11.0))
-    const doc = document.documentElement;
-    doc.setAttribute('data-useragent', navigator.userAgent);
-
-
-
-   /* preloader
+   /* Preloader
     * -------------------------------------------------- */
     const ssPreloader = function() {
 
-        $("html").addClass('ss-preload');
+        const preloader = document.querySelector('#preloader');
+        if (!preloader) return;
 
-        $WIN.on('load', function() {
-
-            // force page scroll position to top at page refresh
-            $('html, body').animate({ scrollTop: 0 }, 'normal');
-
-            // will first fade out the loading animation 
-            $("#loader").fadeOut("slow", function() {
-                // will fade out the whole DIV that covers the website.
-                $("#preloader").delay(300).fadeOut("slow");
-            }); 
+        window.addEventListener('load', function() {
             
-            // for hero content animations 
-            $("html").removeClass('ss-preload');
-            $("html").addClass('ss-loaded');
+            document.querySelector('body').classList.remove('ss-preload');
+            document.querySelector('body').classList.add('ss-loaded');
+
+            preloader.addEventListener('transitionend', function(e) {
+                if (e.target.matches("#preloader")) {
+                    this.style.display = 'none';
+                }
+            });
 
         });
-    };
+
+        // force page scroll position to top at page refresh
+        // window.addEventListener('beforeunload' , function () {
+        //     window.scrollTo(0, 0);
+        // });
+
+    }; // end ssPreloader
 
 
-
-   /* pretty print
+   /* Parallax
     * -------------------------------------------------- */
-    const ssPrettyPrint = function() {
-        $('pre').addClass('prettyprint');
-        $( document ).ready(function() {
-            prettyPrint();
-        });
-    };
+    const ssParallax = function() { 
+
+        const rellax = new Rellax('.rellax');
+
+    }; // end ssParallax
 
 
-
-   /* move header
+   /* Move header menu
     * -------------------------------------------------- */
     const ssMoveHeader = function () {
 
-        const $hero = $('.s-hero'),
-              $hdr = $('.s-header'),
-              triggerHeight = $hero.outerHeight() - 170;
+        const hdr = document.querySelector('.s-header');
+        const hero = document.querySelector('#hero');
+        let triggerHeight;
 
+        if (!(hdr && hero)) return;
 
-        $WIN.on('scroll', function () {
+        setTimeout(function(){
+            triggerHeight = hero.offsetHeight - 170;
+        }, 300);
 
-            let loc = $WIN.scrollTop();
+        window.addEventListener('scroll', function () {
+
+            let loc = window.scrollY;
+           
 
             if (loc > triggerHeight) {
-                $hdr.addClass('sticky');
+                hdr.classList.add('sticky');
             } else {
-                $hdr.removeClass('sticky');
+                hdr.classList.remove('sticky');
             }
 
             if (loc > triggerHeight + 20) {
-                $hdr.addClass('offset');
+                hdr.classList.add('offset');
             } else {
-                $hdr.removeClass('offset');
+                hdr.classList.remove('offset');
             }
 
             if (loc > triggerHeight + 150) {
-                $hdr.addClass('scrolling');
+                hdr.classList.add('scrolling');
             } else {
-                $hdr.removeClass('scrolling');
+                hdr.classList.remove('scrolling');
             }
 
         });
 
-    };
+    }; // end ssMoveHeader
 
 
-
-   /* mobile menu
+   /* Mobile Menu
     * ---------------------------------------------------- */ 
     const ssMobileMenu = function() {
 
-        const $toggleButton = $('.header-menu-toggle');
-        const $headerContent = $('.header-content');
-        const $siteBody = $("body");
+        const toggleButton = document.querySelector('.s-header__menu-toggle');
+        const headerNavWrap = document.querySelector('.s-header__nav-wrap');
+        const siteBody = document.querySelector("body");
 
-        $toggleButton.on('click', function(event){
+        if (!(toggleButton && headerNavWrap)) return;
+
+        toggleButton.addEventListener('click', function(event){
             event.preventDefault();
-            $toggleButton.toggleClass('is-clicked');
-            $siteBody.toggleClass('menu-is-open');
+            toggleButton.classList.toggle('is-clicked');
+            siteBody.classList.toggle('menu-is-open');
         });
 
-        $headerContent.find('.header-nav a, .btn').on("click", function() {
+        headerNavWrap.querySelectorAll('.s-header__nav a').forEach(function(link) {
+            link.addEventListener("click", function(evt) {
 
-            // at 900px and below
-            if (window.matchMedia('(max-width: 900px)').matches) {
-                $toggleButton.toggleClass('is-clicked');
-                $siteBody.toggleClass('menu-is-open');
-            }
-        });
-
-        $WIN.on('resize', function() {
-
-            // above 900px
-            if (window.matchMedia('(min-width: 901px)').matches) {
-                if ($siteBody.hasClass("menu-is-open")) $siteBody.removeClass("menu-is-open");
-                if ($toggleButton.hasClass("is-clicked")) $toggleButton.removeClass("is-clicked");
-            }
-        });
-
-    };
-
-
-   /* accordion
-    * ------------------------------------------------------ */
-    const ssAccordion = function() {
-
-        const $allItems = $('.services-list__item');
-        const $allPanels = $allItems.children('.services-list__item-body');
-
-        $allPanels.slice(1).hide();
-
-        $allItems.on('click', '.services-list__item-header', function() {
-
-            const $this = $(this),
-                  $curItem = $this.parent(),
-                  $curPanel =  $this.next();
-
-            if(!$curItem.hasClass('is-active')){
-                $allPanels.slideUp();
-                $curPanel.slideDown();
-                $allItems.removeClass('is-active');
-                $curItem.addClass('is-active');
-            }
-            
-            return false;
-        });
-    };
-
-
-
-   /* photoswipe
-    * ----------------------------------------------------- */
-    const ssPhotoswipe = function() {
-        const items = [],
-            $pswp = $('.pswp')[0],
-            $folioItems = $('.folio-item');
-
-        // get items
-        $folioItems.each( function(i) {
-
-            let $folio = $(this),
-                $thumbLink =  $folio.find('.folio-item__thumb-link'),
-                $title = $folio.find('.folio-item__title'),
-                $caption = $folio.find('.folio-item__caption'),
-                $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                $captionText = $.trim($caption.html()),
-                $href = $thumbLink.attr('href'),
-                $size = $thumbLink.data('size').split('x'),
-                $width  = $size[0],
-                $height = $size[1];
-        
-            let item = {
-                src  : $href,
-                w    : $width,
-                h    : $height
-            }
-
-            if ($caption.length > 0) {
-                item.title = $.trim($titleText + $captionText);
-            }
-
-            items.push(item);
-        });
-
-        // bind click event
-        $folioItems.each(function(i) {
-
-            $(this).find('.folio-item__thumb-link').on('click', function(e) {
-                e.preventDefault();
-                let options = {
-                    index: i,
-                    showHideOpacity: true
+                // at 800px and below
+                if (window.matchMedia('(max-width: 800px)').matches) {
+                    toggleButton.classList.toggle('is-clicked');
+                    siteBody.classList.toggle('menu-is-open');
                 }
-
-                // initialize PhotoSwipe
-                let lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                lightBox.init();
             });
-
         });
-    };
+
+        window.addEventListener('resize', function() {
+
+            // above 800px
+            if (window.matchMedia('(min-width: 801px)').matches) {
+                if (siteBody.classList.contains('menu-is-open')) siteBody.classList.remove('menu-is-open');
+                if (toggleButton.classList.contains("is-clicked")) toggleButton.classList.remove("is-clicked");
+            }
+        });
+
+    }; // end ssMobileMenu
 
 
-
-   /* slick slider
+   /* Highlight active menu link on pagescroll
     * ------------------------------------------------------ */
-    const ssSlickSlider = function() {
+    const ssScrollSpy = function() {
+
+        const sections = document.querySelectorAll(".target-section");
+
+        // Add an event listener listening for scroll
+        window.addEventListener("scroll", navHighlight);
+
+        function navHighlight() {
+        
+            // Get current scroll position
+            let scrollY = window.pageYOffset;
+        
+            // Loop through sections to get height(including padding and border), 
+            // top and ID values for each
+            sections.forEach(function(current) {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 50;
+                const sectionId = current.getAttribute("id");
             
-        $('.testimonial-slider').slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            pauseOnFocus: false,
-            autoplaySpeed: 1500,
-            responsive: [
-                {
-                    breakpoint: 1080,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
+               /* If our current scroll position enters the space where current section 
+                * on screen is, add .current class to parent element(li) of the thecorresponding 
+                * navigation link, else remove it. To know which link is active, we use 
+                * sectionId variable we are getting while looping through sections as 
+                * an selector
+                */
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
+                } else {
+                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
+                }
+            });
+        }
+
+    }; // end ssScrollSpy
+
+
+   /* Swiper
+    * ------------------------------------------------------ */ 
+    const ssSwiper = function() {
+
+        const mySwiper = new Swiper('.swiper-container', {
+
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },          
+            breakpoints: {
+                // when window width is >= 401px
+                401: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
                 },
+                // when window width is >= 801px
+                801: {
+                    slidesPerView: 2,
+                    spaceBetween: 48
+                }
+            }
+         });
+
+    }; // end ssSwiper
+
+
+   /* Lightbox
+    * ------------------------------------------------------ */
+    const ssLightbox = function() {
+
+        const folioLinks = document.querySelectorAll('.folio-item a');
+        const modals = [];
+
+        folioLinks.forEach(function(link) {
+            let modalbox = link.getAttribute('href');
+            let instance = basicLightbox.create(
+                document.querySelector(modalbox),
                 {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
+                    onShow: function(instance) {
+                        //detect Escape key press
+                        document.addEventListener("keydown", function(evt) {
+                            evt = evt || window.event;
+                            if(evt.keyCode === 27){
+                            instance.close();
+                            }
+                        });
                     }
                 }
-            ]
-        });
-    };
-
-
-   /* Animate On Scroll
-    * ------------------------------------------------------ */
-    const ssAOS = function() {
-        
-        AOS.init( {
-            offset: 100,
-            duration: 600,
-            easing: 'ease-in-out',
-            delay: 300,
-            once: true,
-            disable: 'mobile'
+            )
+            modals.push(instance);
         });
 
-    };
+        folioLinks.forEach(function(link, index) {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                modals[index].show();
+            });
+        });
+
+    };  // end ssLightbox
 
 
-
-   /* alert boxes
+   /* Alert boxes
     * ------------------------------------------------------ */
     const ssAlertBoxes = function() {
 
-        $('.alert-box').on('click', '.alert-box__close', function() {
-            $(this).parent().fadeOut(500);
-        }); 
+        const boxes = document.querySelectorAll('.alert-box');
+  
+        boxes.forEach(function(box) {
 
-    };
+            box.addEventListener('click', function(e){
+                if (e.target.matches(".alert-box__close")) {
+                    e.stopPropagation();
+                    e.target.parentElement.classList.add("hideit");
 
-    
-   /* smooth scrolling
+                    setTimeout(function() {
+                        box.style.display = "none";
+                    }, 500)
+                }    
+            });
+
+        })
+
+    }; // end ssAlertBoxes
+
+
+   /* Smoothscroll
     * ------------------------------------------------------ */
-    const ssSmoothScroll = function() {
+    const ssSmoothScroll = function () {
         
-        $('.smoothscroll').on('click', function (e) {
-            const target = this.hash;
-            const $target = $(target);
-            
-            e.preventDefault();
-            e.stopPropagation();
+        const triggers = document.querySelectorAll(".smoothscroll");
 
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing').promise().done(function () {
-                window.location.hash = target;
+        triggers.forEach(function(trigger) {
+            trigger.addEventListener("click", function() {
+                const target = trigger.getAttribute("href");
+
+                Jump(target, {
+                    duration: 1200,
+                });
             });
         });
 
-    };
+    }; // end ssSmoothScroll
 
 
    /* back to top
     * ------------------------------------------------------ */
     const ssBackToTop = function() {
-        
-        const pxShow = 800;
-        const $goTopButton = $(".ss-go-top")
+
+        const pxShow = 900;
+        const goTopButton = document.querySelector(".ss-go-top");
+
+        if (!goTopButton) return;
 
         // Show or hide the button
-        if ($(window).scrollTop() >= pxShow) $goTopButton.addClass('link-is-visible');
+        if (window.scrollY >= pxShow) goTopButton.classList.add("link-is-visible");
 
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() >= pxShow) {
-                if(!$goTopButton.hasClass('link-is-visible')) $goTopButton.addClass('link-is-visible')
+        window.addEventListener('scroll', function() {
+            if (window.scrollY >= pxShow) {
+                if(!goTopButton.classList.contains('link-is-visible')) goTopButton.classList.add("link-is-visible")
             } else {
-                $goTopButton.removeClass('link-is-visible')
+                goTopButton.classList.remove("link-is-visible")
             }
         });
-    };
+
+    }; // end ssBackToTop
 
 
 
@@ -319,17 +302,16 @@
     (function ssInit() {
 
         ssPreloader();
-        ssPrettyPrint();
+        ssParallax();
         ssMoveHeader();
         ssMobileMenu();
-        ssAccordion();
-        ssPhotoswipe();
-        ssSlickSlider();
-        ssAOS();
+        ssScrollSpy();
+        ssSwiper();
+        ssLightbox();
         ssAlertBoxes();
         ssSmoothScroll();
         ssBackToTop();
 
     })();
 
-})(jQuery);
+})(document.documentElement);

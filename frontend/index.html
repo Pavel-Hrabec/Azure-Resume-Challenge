@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Ethos</title>
+    <title>Ceevee 2.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -15,15 +15,13 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/vendor.css">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
+    <script defer src="js/vendor/fontawesome/all.min.js"></script>
     <script src="js/api.js"></script>
-
 
     <!-- favicons
     ================================================== -->
@@ -34,95 +32,80 @@
 
 </head>
 
-<body id="top">
+<body id="top" class="ss-preload">
 
 
     <!-- preloader
     ================================================== -->
     <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <div id="loader"></div>
     </div>
 
 
     <!-- header
     ================================================== -->
     <header class="s-header">
-
-        <div class="header-logo">
-            <a href="index.html">
-                <img src="images/logo.svg" alt="Homepage">
-            </a>
-        </div>
-
-        <div class="header-content">
-    
-            <nav class="row header-nav-wrap">
-                <ul class="header-nav">
-                    <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="About">About</a></li>
-                    <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
-                    <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
-                    <li><a href="mailto:#0" title="Contact us">Say Hello</a></li>
-
+        <div class="row s-header__nav-wrap">
+            <nav class="s-header__nav">
+                <ul>
+                    <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
+                    <li><a class="smoothscroll" href="#about">About</a></li>
+                    <li><a class="smoothscroll" href="#resume">Resume</a></li>
+                    <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+                    <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
+                    <li><a class="smoothscroll" href="#contact">Say Hello</a></li>
+                    
                 </ul>
-            </nav> <!-- end header-nav-wrap -->
-
-            <a href="#0" class="btn btn--stroke btn--small">Download CV</a>
-
-
-        </div> <!-- end header-content -->
-
-        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
-    </header> 
+            </nav>
+        </div> <!-- end row -->
+        
+        <a class="s-header__menu-toggle" href="#0" title="Menu">
+            <span class="s-header__menu-icon"></span>
+        </a>
+    </header> <!-- end s-header -->
 
 
     <!-- hero
     ================================================== -->
-    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg-3000.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="hero" class="s-hero target-section">
 
-        <div class="row hero-content">
+        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
 
-            <div class="column large-full">
+        <div class="row s-hero__content">
+            <div class="column">
 
-                <h1>
-                Hello, I'm Pavel Hrabec, <br>
-                Network & Information <br>
-                Security Analyst <br>
-                at Verizon in EMEA. <br>
-                <a id="counter"></a> 
-                </h1>
+                <div class="s-hero__content-about">
 
+                    <h1>Hi, I'm Pavel Hrabec</h1>
 
-                <ul class="hero-social">
-                    <li>
-                        <a href="https://www.linkedin.com/in/pavel-hrabec-0a918519b/" title="">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Pavel-Hrabec/Azure-Resume-Challenge" title="">GitHub</a>
-                    </li>
-                    <li>
-                        <a id="counter"></a>
-                    </li>
-                    <li>
-                        <a href="#0" title="">Visits <a id="counter"></a></a>
-                    </li>
+                    <h3>
+                    I work as <span>Network & Information Security Analyst </span> at Verizon.
+                    Site was created as part of Cloud Resume Challenge and was visited <a id="counter"></a> times.
+                    If you want to learn <a class="smoothscroll" href="#about">about me</a> and my skill <a class="smoothscroll" href="#about">start scrolling</a>.
+                    </h3>
 
-                </ul> <!-- end hero-social -->
+                    <div class="s-hero__content-social">
+                        <a href="#0"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="far fa-comment" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/pavel-hrabec-0a918519b/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
 
-            </div> 
+                </div> <!-- end s-hero__content-about -->
 
-        </div> <!-- end hero-content -->
+            </div>
+        </div> <!-- s-hero__content -->
 
-        <div class="hero-scroll">
-            <a href="#about" class="scroll-link smoothscroll">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 24l-8-9h6v-15h4v15h6z"/></svg>
+        <div class="s-hero__scroll">
+            <a href="#about" class="s-hero__scroll-link smoothscroll">
+                <span class="scroll-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
             </a>
-        </div> <!-- end hero-scroll -->
+        </div> <!-- s-hero__scroll -->
 
     </section> <!-- end s-hero -->
 
@@ -131,246 +114,280 @@
     ================================================== -->
     <section id="about" class="s-about target-section">
 
-        <div class="s-about__section s-about__section--profile">
+        <div class="row">
+            <div class="column large-3 tab-12">
+                <img class="s-about__pic" src="images/avatars/user-06.jpg" alt="">
+            </div>
+            <div class="column large-9 tab-12 s-about__content">
+                <h3>About Me</h3>
+                <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
+                quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit 
+                aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
+                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
+                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+                sed quia non numquam eius modi tempora incidunt ut labore et dolore 
+                magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis 
+                nostrum exercitationem ullam corporis suscipit laboriosam.
+                </p>
 
-            <div class="right-vert-line"></div>
+                <hr>
 
-            <div class="row">
-                <div class="column large-6 medium-8 tab-full">
-
-                    <div class="section-intro" data-num="01" data-aos="fade-up">
-                        <h3 class="subhead">About Me</h3>
-                        <h1 class="display-1">I'm the kind of person who isn't afraid of challenges.</h1>
+                <div class="row s-about__content-bottom">
+                    <div class="column w-1000-stack">
+                        <h3>Contact Details</h3>
+    
+                        <p>
+                        Jonathan Doe <br>
+                        1600 Amphitheatre Parkway <br>
+                        Mountain View, CA 94043 US <br>
+                        <a href="tel:+1975432345">+197 543 2345</a> <br>
+                        <a href="mailto:#0">sayhello@ceevee.com</a>
+                        </p>
+                        
                     </div>
-
-                    <div class="profile-pic" data-aos="fade-up">
-                        <img src="images/profile-pic.jpg" 
-                             srcset="images/profile-pic.jpg 1x, images/profile-pic@2x.jpg 2x" alt="">
+                    <div class="column w-1000-stack">
+                        <a href="#0" class="btn btn--download">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path><path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path></svg>
+                            Download CV
+                        </a>
                     </div>
-
-                    <h3 data-aos="fade-up">Profile</h3>
-
-                    <p data-aos="fade-up">
-                    In consectetuer turpis ut velit. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. 
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis 
-                    mi consectetuer lacinia. Fusce neque. Curabitur nisi. Suspendisse nisl elit, rhoncus eget, elementum ac, 
-                    condimentum eget, diam. Phasellus magna. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, 
-                    ipsum. Maecenas egestas arcu quis ligula mattis placerat. Suspendisse pulvinar, augue ac venenatis condimentum, 
-                    sem libero volutpat nibh, nec pellentesque velit pede quis nunc.
-                    </p>
-
                 </div>
             </div>
-
-        </div> <!-- end s-about__section--profile -->
-
-        <div class="s-about__section">
-
-            <div class="row">
-                <div class="column">
-                    <h3 data-aos="fade-up">Career</h3>
-                </div>
-            </div>
-
-            <div class="row block-large-1-2 block-900-full work-positions">
-
-                <div class="column" data-aos="fade-up">
-                    <div class="position">
-                        <div class="position__header">
-                            <h6>
-                                <span class="position__co">Google</span>
-                                <span class="position__pos">Product Designer</span>
-                            </h6>
-                            <div class="position__timeframe">
-                                June 2017 - Present
-                            </div>
-                        </div>
-
-                        <p>
-                        Pellentesque posuere. Etiam rhoncus. Praesent blandit laoreet nibh. 
-                        Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, 
-                        eu sollicitudin urna dolor sagittis lacus. 
-                        </p>
-                    </div>
-                </div> <!-- end column -->
-                <div class="column" data-aos="fade-up">
-                    <div class="position">
-                        <div class="position__header">
-                            <h6>
-                                <span class="position__co">Facebook</span>
-                                <span class="position__pos">UX Director</span>
-                            </h6>
-                            <div class="position__timeframe">
-                                August 2015 - June 2017
-                            </div>
-                        </div>
-
-                        <p>
-                        Aliquam erat volutpat. Phasellus volutpat, metus eget egestas mollis, 
-                        lacus lacus blandit dui, id egestas quam mauris ut lacus. Pellentesque 
-                        dapibus hendrerit tortor. 
-                        </p>
-                    </div>
-                </div> <!-- end column -->
-                <div class="column" data-aos="fade-up">
-                    <div class="position">
-                        <div class="position__header">
-                            <h6>
-                                <span class="position__co">Dropbox</span>
-                                <span class="position__pos">Mobile App Designer</span>
-                            </h6>
-                            <div class="position__timeframe">
-                                April 2014 - August 2015
-                            </div>
-                        </div>
-
-                        <p>
-                        In hac habitasse platea dictumst. Donec pede justo, fringilla vel, aliquet nec, 
-                        vulputate eget, arcu. Fusce risus nisl, viverra et, tempor et, pretium in, sapien.
-                        Phasellus volutpat, metus eget.
-                        </p>
-                    </div>
-                </div> <!-- end column -->
-                <div class="column" data-aos="fade-up">
-                    <div class="position">
-                        <div class="position__header">
-                            <h6>
-                                <span class="position__co">Microsoft</span>
-                                <span class="position__pos">Product Designer</span>
-                            </h6>
-                            <div class="position__timeframe">
-                                June 2012 - February 2014
-                            </div>
-                        </div>
-
-                        <p>
-                        Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
-                        Curabitur blandit mollis lacus. Curabitur vestibulum aliquam leo. 
-                        Vivamus in erat ut urna cursus vestibulum.
-                        </p>
-                    </div>
-                </div> <!-- end column -->
-
-            </div> <!-- work positions -->
-
-        </div> <!-- end s-about__section -->
+        </div> <!-- end row -->
 
     </section> <!-- end s-about -->
 
 
-    <!-- services
+    <!-- resume
     ================================================== -->
-    <section id="services" class="s-services target-section h-dark-bg">
+    <section id="resume" class="s-resume target-section">
         
-        <div class="row s-services__content">
-
-            <div class="vert-line"></div>
-
-            <div class="column large-6 s-services__leftcol">
-                <div class="section-intro" data-num="02" data-aos="fade-up">
-                    <h3 class="subhead">Expertise</h3>
-
-                    <h1 class="display-1">
-                    I focus on crafting web experiences
-                    and designs that works.
-                    </h1>
-                </div>
-
-                <p class="lead" data-aos="fade-up">
-                Suspendisse eu ligula. Duis arcu tortor, suscipit eget, 
-                imperdiet nec, imperdiet iaculis, ipsum. Nulla facilisi.
-                Etiam rhoncus. Praesent blandit laoreet nibh.
-                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-                Cras sagittis. Praesent egestas tristique nibh.
-                </p>
-            </div> <!-- end  s-services--leftcol -->
-
-            <div class="column large-6">
-                <ul class="services-list" data-aos="fade-up">
-                    <li class="services-list__item is-active">
-                        <div class="services-list__item-header">
-                            <h5>Product Design</h5>
-                        </div>
-                        <div class="services-list__item-body">
-                            <p>
-                            Fusce egestas elit eget lorem. Donec venenatis vulputate lorem. 
-                            Nam at tortor in tellus interdum sagittis. Vestibulum fringilla 
-                            pede sit amet augue. Praesent blandit laoreet nibh.
-                            Donec quam felis, ultricies nec, pellentesque eu.
-                            </p>
-                        </div>
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>Branding</h5>
-                        </div>
-                        <div class="services-list__item-body">
-                            <p>
-                            Sed cursus turpis vitae tortor. Sed aliquam ultrices mauris. 
-                            Fusce fermentum. Curabitur turpis. Nunc egestas, augue at pellentesque 
-                            laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. 
-                            In consectetuer turpis ut velit. Curabitur at lacus.
-                            </p>
-                        </div>
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>Frontend Development</h5>
-                        </div>
-                        <div class="services-list__item-body">
-                            <p>
-                            Suspendisse non nisl sit amet velit hendrerit rutrum. Etiam vitae tortor. 
-                            Ut tincidunt tincidunt erat. Praesent nonummy mi in odio. Praesent ut 
-                            ligula non mi varius sagittis. Curabitur turpis. Nunc egestas, augue at pellentesque 
-                            laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.
-                            </p>
-                        </div>
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>UX Research</h5>
-                        </div>
-                        <div class="services-list__item-body">
-                            <p>
-                            Nullam quis ante. Sed libero. Curabitur at lacus ac velit ornare lobortis. 
-                            Morbi nec metus. Aenean vulputate eleifend tellus. Nullam vel sem. Nam ipsum risus, 
-                            rutrum vitae, vestibulum eu, molestie vel, lacus. Phasellus ullamcorper ipsum rutrum nunc. 
-                            Cras dapibus. Praesent egestas neque eu enim.
-                            </p>
-                        </div>
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>Visual Design</h5>
-                        </div>
-                        <div class="services-list__item-body">
-                            <p>
-                            Ut id nisl quis enim dignissim sagittis. Pellentesque egestas, neque sit amet convallis 
-                            pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Phasellus volutpat, 
-                            metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. 
-                            Cras dapibus. Praesent adipiscing.
-                            </p>
-                        </div>
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>E-Commerce</h5>
-                        </div>
-                        <div class="services-list__item-body">
-                            <p>
-                            Praesent ac sem eget est egestas volutpat. Nam pretium turpis et arcu. Quisque ut nisi. 
-                            Vestibulum rutrum, mi nec elementum vehicula, eros quam gravida nisl, id fringilla neque 
-                            ante vel mi. Phasellus dolor. Aenean vulputate eleifend tellus. Nullam vel sem. Nam ipsum risus, 
-                            rutrum vitae, vestibulum eu, molestie vel.
-                            </p>
-                        </div>
-                    </li> <!-- services-list__item -->
-                </ul> <!-- end services-list -->
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Experience</h3>
             </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
 
-        </div> <!-- s-services__content -->
+                    <div class="resume-block__header">
+                        <h4 class="h3">Verizon</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Network & Information Security Analyst</span> 
+                            <span class="resume-block__header-date">
+                                August 2021 - Present
+                            </span>
+                        </p>
+                    </div>
 
-    </section> <!-- end s-services -->
+                    <p>
+                    Supporting critical European customer as incident responder in advanced security center. 
+                    Determining the scope of attack with SIEM tools (Splunk and Qradar) and leveraging XSOAR platform to respond in real-time to threats.
+                    </p>
+
+                    <div class="resume-block__header">
+                        <p class="resume-block__header-meta">
+                            <span>Network Engineer</span> 
+                            <span class="resume-block__header-date">
+                                November 2019 - August 2021
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Part of dedicated team supporting a major UK customer with over 11 000 managed locations. Troubleshooting, testing and replacing network infrastructure. 
+                        Developed Python scripts to generate reports in order to improve communication with customer as well as effectively troubleshoot major outages to get precise scale of impact on business and resolve incident in faster manner to improve MTTR.
+                    </p>
+    
+                </div> <!-- end resume-block -->
+            </div>
+        </div> <!-- s-resume__section -->
+
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Education</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+                    <div class="resume-block__header">
+                        <h4 class="h3">Silesian University in Opava</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Master's degree in Computer/Information Technology Administration and Management</span> 
+                            <span class="resume-block__header-date">
+                                June 2021
+                            </span>
+                        </p>
+                        <p class="resume-block__header-meta">
+                            <span>Bachelor's degree in Computer/Information Technology Administration and Management</span> 
+                            <span class="resume-block__header-date">
+                                August 2019
+                            </span>
+                        </p>
+                    </div>                 
+                </div> <!-- end resume-block -->
+            </div>
+        </div> <!-- s-resume__section -->
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Certifications</h3>
+            </div>
+            <div class="column large-6 tab-12">
+                <div class="resume-block">
+                    <div class="resume-block__header">
+                        <h4 class="h3">CCNA Routing and Switching</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Issued by Cisco</span> 
+                            <span class="resume-block__header-date">
+                                January 2019 - June 2023
+                            </span>
+                            <p>
+                            This certification validates the skills required of associate-level network professionals to understand network fundamentals, LAN switching technologies, IPv4 and IPv6 routing technologies, WAN technologies, infrastructure services, security, and management.
+                            </p>
+                        </p>
+                    </div>
+                
+                    <div class="resume-block__header">
+                        <h4 class="h3">Security+ ce Certification</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Issued by CompTIA</span> 
+                            <span class="resume-block__header-date">
+                                October 2021 - June 2024
+                            </span>
+                            <p>
+                            CompTIA Security+ professionals know how to identify and address potential threats, attacks and vulnerabilities and they have established techniques in risk management, risk mitigation, threat management and intrusion detection.
+                            </p>
+                        </p>
+                    </div>
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Azure Fundamentals</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Issued by Microsoft</span> 
+                            <span class="resume-block__header-date">
+                                December 2021
+                            </span>
+                            <p>
+                            Earners of the Azure Fundamentals certification have demonstrated foundational level knowledge of cloud services and how those services are provided with Microsoft Azure.
+                            </p>
+                        </p>
+                    </div>
+                    
+                    <div class="resume-block__header">
+                        <h4 class="h3">Azure Securtiy Engineer Associate</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Issued by Microsoft</span> 
+                            <span class="resume-block__header-date">
+                                February 2022 - February 2023
+                            </span>
+                            <p>
+                                Earning Azure Security Engineer Associate certification validates the skills and knowledge to implement security controls and threat protection, manage identity and access, and protect data, applications, and networks in cloud and hybrid environments as part of end-to-end infrastructure.
+                            </p>
+                        </p>
+                    </div>
+                    
+                    <div class="resume-block__header">
+                        <h4 class="h3">Azure Administrator Associate</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Issued by Microsoft</span> 
+                            <span class="resume-block__header-date">
+                                February 2022 - February 2023
+                            </span>
+                            <p>
+                                Earning Azure Administrator Associate certification validates the skills and knowledge to implement, manage, and monitor an organization’s Microsoft Azure environment. Candidates have a deep understanding of each implementing, managing, and monitoring identity, governance, storage, compute, and virtual networks in a cloud environment, plus provision, size, monitor, and adjust resources, when needed.
+                            </p>
+                        </p>
+                    </div> 
+                </div>
+            </div> <!-- end resume-block -->
+            <div class="column large-3 tab-12">
+                <div class="resume-block">
+                    <img src="images/certifications/CCNA.png">
+                    <p></p>
+                    <img src="images/certifications/security.png">
+                    <p></p>
+
+                    <img src="images/certifications/AZ-900.png">
+                    <p></p>
+
+                    <img src="images/certifications/AZ-305.png">
+                    <p> </p>
+                    <p> </p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <img src="images/certifications/AZ-104.png">
+                </div>
+            </div>
+        </div> <!-- s-resume__section -->
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Skills</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
+                    <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
+                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
+                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
+                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
+                    </p>
+
+                    <ul class="skill-bars-fat">
+                        <li>
+                        <div class="progress percent100"></div>
+                        <strong>Ability to learn </strong>
+                        </li>
+                        <li>
+                        <div class="progress percent75"></div>
+                        <strong>Networking</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent60"></div>
+                        <strong>Python</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent85"></div>
+                        <strong>Problem solving</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent90"></div>
+                        <strong>Communication</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent60"></div>
+                        <strong>SPL language</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent70"></div>
+                        <strong>QRadar Platform</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent75"></div>
+                        <strong>Azure Technologies</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent30"></div>
+                        <strong>Terraform</strong>
+                        </li>
+                        <li>
+                        <div class="progress percent10"></div>
+                        <strong>Kubernetes</strong>
+                        </li>
+                    </ul>
+
+                </div> <!-- end resume-block -->
+
+            </div>
+        </div> <!-- s-resume__section -->
+
+    </section> <!-- end s-resume -->
 
 
     <!-- portfolio
@@ -378,355 +395,427 @@
     <section id="portfolio" class="s-portfolio target-section">
 
         <div class="row s-portfolio__header">
-            <div class="column large-6 medium-8 tab-full">
-                <div class="section-intro" data-num="03" data-aos="fade-up">
-                    <h3 class="subhead">Portfolio</h3>
-                    <h1 class="display-1">
-                        A selection of recent projects I have worked on.
-                    </h1>
-                </div>
+            <div class="column large-12">
+                <h3>A Few Of My Latest Creations</h3>
             </div>
-        </div> <!-- s-porfolio__header -->
+        </div>
 
-        <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+        <div class="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
 
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-windows-in-the-city.jpg" title="Windows in The City" data-size="1050x700">
-                            <img src="images/portfolio/windows-in-the-city.jpg" 
-                                 srcset="images/portfolio/windows-in-the-city.jpg 1x, images/portfolio/windows-in-the-city@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Branding</div>
-                        <h4 class="folio-item__title">Windows in The City</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-building-blocks.jpg" title="Building Blocks" data-size="1050x700">
-                            <img src="images/portfolio/building-blocks.jpg" 
-                                 srcset="images/portfolio/building-blocks.jpg 1x, images/portfolio/building-blocks@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Building Blocks</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-shout-jump.jpg" Title="Shout and Jump" data-size="1050x700">
-                            <img src="images/portfolio/shout-and-jump.jpg" 
-                                 srcset="images/portfolio/shout-and-jump.jpg 1x, images/portfolio/shout-and-jump@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Branding</div>
-                        <h4 class="folio-item__title">Shout & Jump</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-sand-dunes.jpg" title="Sand Dunes" data-size="1050x700">
-                            <img src="images/portfolio/sand-dunes.jpg" 
-                                 srcset="images/portfolio/sand-dunes.jpg 1x, images/portfolio/sand-dunes@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Sand Dunes</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-woodcraft.jpg" title="Sand Dunes" data-size="1050x700">
-                            <img src="images/portfolio/woodcraft.jpg" 
-                                 srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Product Design</div>
-                        <h4 class="folio-item__title">Wooocraft</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-lamp.jpg" title="The Lamp" data-size="1050x700">
-                            <img src="images/portfolio/lamp.jpg" 
-                                 srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Product Design</div>
-                        <h4 class="folio-item__title">The Lamp</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
+            <div class="column folio-item">
+                <a href="#modal-01" class="folio-item__thumb">
+                    <img src="images/portfolio/droplet.jpg" 
+                         srcset="images/portfolio/droplet.jpg 1x, 
+                                 images/portfolio/droplet@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
 
-        </div> <!-- folio-list -->
+            <div class="column folio-item">
+                <a href="#modal-02" class="folio-item__thumb">
+                    <img src="images/portfolio/lamp.jpg" 
+                         srcset="images/portfolio/lamp.jpg 1x, 
+                                 images/portfolio/lamp@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
 
-    </section> <!-- end portfolio -->
+            <div class="column folio-item">
+                <a href="#modal-03" class="folio-item__thumb">
+                    <img src="images/portfolio/minimalismo.jpg" 
+                         srcset="images/portfolio/minimalismo.jpg 1x, 
+                                 images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-04" class="folio-item__thumb">
+                    <img src="images/portfolio/shutterbug.jpg" 
+                         srcset="images/portfolio/shutterbug.jpg 1x, 
+                                 images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-05" class="folio-item__thumb">
+                    <img src="images/portfolio/fuji.jpg" 
+                         srcset="images/portfolio/fuji.jpg 1x, 
+                                 images/portfolio/fuji@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-06" class="folio-item__thumb">
+                    <img src="images/portfolio/skaterboy.jpg" 
+                         srcset="images/portfolio/skaterboy.jpg 1x, 
+                                 images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-07" class="folio-item__thumb">
+                    <img src="images/portfolio/rucksack.jpg" 
+                         srcset="images/portfolio/rucksack.jpg 1x, 
+                                 images/portfolio/rucksack@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+            <div class="column folio-item">
+                <a href="#modal-08" class="folio-item__thumb">
+                    <img src="images/portfolio/sanddunes.jpg" 
+                         srcset="images/portfolio/sanddunes.jpg 1x, 
+                                 images/portfolio/sanddunes@2x.jpg 2x" alt="">
+                </a>
+            </div> <!-- end folio-item -->
+
+        </div> <!-- end folio-list -->
+
+
+        <!-- Modal Templates Popup
+        =========================================================== -->
+        <div id="modal-01" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-droplet.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Droplet</h5>
+                    <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-02" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-lamp.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>The Lamp</h5>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-03" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Minimalismo</h5>
+                    <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-04" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-shutterbug.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Shutterbug</h5>
+                    <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
+                    <ul class="modal-popup__cat">
+                        <li>E-Commerce</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-05" hidden>
+            <div class="modal-popup">
+
+                <img src="images/portfolio/gallery/g-fuji.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Fuji</h5>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-06" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Skaterboy</h5>
+                    <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-07" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-rucksack.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Rucksack</h5>
+                    <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Branding</li>
+                        <li>Product Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+        <div id="modal-08" hidden>
+            <div class="modal-popup">
+                <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="" />
+    
+                <div class="modal-popup__desc">
+                    <h5>Sand Dunes</h5>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                    <ul class="modal-popup__cat">
+                        <li>Web Design</li>
+                    </ul>
+                </div>
+    
+                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+            </div>
+        </div> <!-- end modal -->
+
+
+    </section> <!-- end s-portfolio -->
+
+
+    <!-- CTA
+    ================================================== -->
+    <section class="s-cta">
+
+        <div class="row">
+            <div class="column">
+                <h3 class="h2 section-desc">
+                    Need a great reliable web hosting?
+                </h3>
+            </div>
+        </div> <!-- end heading-block -->
+
+        <div class="row cta-content">
+            <div class="column">
+                <p>
+                We highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
+                Powerful web and Wordpress hosting. Guaranteed.
+                Starting at $2.95 per month.
+                </p>
+
+                <a href="https://www.dreamhost.com/r.cgi?287326" class="btn btn--primary h-full-width">Get Started</a>
+            </div>
+        </div> <!-- end cta-content -->
+
+    </section> <!-- end s-cta -->
 
 
     <!-- testimonials
     ================================================== -->
-    <section id="testimonials" class="s-testimonials">
+    <section id="testimonials" class="s-testimonials target-section">
 
-        <div class="row collapse">
+        <div class="s-testimonials__bg"></div>
 
-            <div class="column large-full">
+        <div class="row s-testimonials__header">
+            <div class="column large-12">
+                <h3>Hear What My Clients Says</h3>
+            </div>
+        </div>
 
-                <div class="testimonial-slider" data-aos="fade-up">
+        <div class="row s-testimonials__content">
 
-                    <div class="testimonial-slider__slide">
-                        <p>
-                        Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
-                        Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
-                        Laudantium quia consequatur molestias delectus culpa.
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Tim Cook</strong>
-                                <span>CEO, Apple</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
+            <div class="column">
+
+                <div class="swiper-container testimonial-slider">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Tim Cook</strong>
+                                    <span>CEO, Apple</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
+                            Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
+                            Laudantium quia consequatur molestias delectus culpa.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
+        
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Sundar Pichai</strong>
+                                    <span>CEO, Google</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
+                            Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
+                            Quasi voluptas eius distinctio. Atque eos maxime.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
+        
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Satya Nadella</strong>
+                                    <span>CEO, Microsoft</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
+                            Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
+                            Voluptatem dignissimos ut.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
+
+                        <div class="testimonial-slider__slide swiper-slide">
+                            <div class="testimonial-slider__author">
+                                <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">
+                                <cite class="testimonial-slider__cite">
+                                    <strong>Jeff Bezos</strong>
+                                    <span>CEO, Amazon</span>
+                                </cite>
+                            </div>
+                            <p>
+                            Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
+                            quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
+                            Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                            </p>
+                        </div> <!-- end testimonial-slider__slide -->
     
-                    <div class="testimonial-slider__slide">
-                        <p>
-                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                        Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                        Quasi voluptas eius distinctio. Atque eos maxime.
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Sundar Pichai</strong>
-                                <span>CEO, Google</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-    
-                    <div class="testimonial-slider__slide">
-                        <p>
-                        Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                        Voluptatem dignissimos ut.
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Satya Nadella</strong>
-                                <span>CEO, Microsoft</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-    
-                    <div class="testimonial-slider__slide">
-                        <p>
-                        Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
-                        quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
-                        Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Jeff Bezos</strong>
-                                <span>CEO, Amazon</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
+                    </div> <!-- end testimonial slider swiper-wrapper -->
 
-                </div> <!-- end testimonial slider -->
-                
+                    <div class="swiper-pagination"></div>
+
+                </div> <!-- end swiper-container -->
+
             </div> <!-- end column -->
 
         </div> <!-- end row -->
 
-
-        <!-- CTA
-        ================================================== -->
-        <div class="s-cta">
-
-            <div class="row">
-                <div class="column large-full">
-                    <h2 class="section-desc" data-aos="fade-up">
-                        Need a great reliable web hosting?
-                    </h2>
-                </div>
-            </div>
-    
-            <div class="row cta-content" data-aos="fade-up">
-                <div class="column large-full">
-                    <p>
-                    We highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
-                    Powerful web and Wordpress hosting. Guaranteed.
-                    Starting at $2.95 per month.
-                    </p>
-    
-                    <a href="https://www.dreamhost.com/r.cgi?287326" class="btn btn--primary h-full-width">Get Started</a>
-                </div>
-            </div> <!-- end cta-content -->
-    
-        </div> <!-- end s-cta -->
-
-
     </section> <!-- end s-testimonials -->
 
 
-    <!-- footer
+    <!-- contact
     ================================================== -->
-    <footer class="s-footer h-dark-bg">
-        
-        <div class="right-vert-line"></div>
+    <section id="contact" class="s-contact target-section">
 
-        <div class="row s-footer__main">
-            <div class="column large-6">
-                <div class="section-intro" data-aos="fade-up">
-                    <h3 class="subhead">Get In Touch</h3>
-
-                    <h1 class="display-1">
-                    Have an idea or a concept that really excite you?
-                    Let's turn that idea into reality. Shoot me a message.
-                    </h1>
-                </div>
-
-                <div class="footer-email-us">
-                    <a href="mailto:#0" class="btn btn--primary h-full-width">Let's Talk</a>
-                </div>
+        <div class="row s-contact__header">
+            <div class="column large-12">
+                <h3 class="section-header-allcaps">Say Hello</h3>
             </div>
-
-            <div class="column large-5">
-                <div class="footer-contacts">
-                    <div class="footer-contact-block" data-aos="fade-up">
-                        <h5 class="footer-contact-block__header">
-                            Email
-                        </h5>
-                        <p class="footer-contact-block__content">
-                            <a href="mailto:#0">sayhello@ethos.com</a>
-                        </p>
-                    </div> <!-- end footer-contact-block -->
-                    <div class="footer-contact-block" data-aos="fade-up">
-                        <h5 class="footer-contact-block__header">
-                            Phone
-                        </h5>
-                        <p class="footer-contact-block__content">
-                            <a href="tel:+1975432345">+197 543 2345</a>
-                        </p>
-                    </div> <!-- end footer-contact-block -->
-                    <br>
-                    <div class="footer-contact-block" data-aos="fade-up">
-                        <h5 class="footer-contact-block__header">
-                            Social
-                        </h5>
-                        <ul class="footer-contact-block__list">
-                            <li><a href="#0">Twitter</a></li>
-                            <li><a href="#0">Instagram</a></li>
-                            <li><a href="#0">Behance</a></li>
-                            <li><a href="#0">Dribbble</a></li>
-                        </ul>
-                    </div> <!-- end footer-contact-block -->
-                </div>
-            </div>
-        </div> <!-- end s-footer__main -->
-
-        <div class="row s-footer__bottom">
-            <div class="column large-full ss-copyright">
-                <span>© Copyright Ethos 2019</span> 
-                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
-            </div> <!-- end ss-copyright -->
-
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
-                </a>
-            </div> <!-- end ss-go-top -->
-        </div> <!-- end s-footer__bottom -->
-
-    </footer> <!-- end s-footer -->
-
-
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                    "Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                "Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-
         </div>
 
-    </div> <!-- end photoSwipe background -->
+        <div class="row s-contact__content">
+
+            <div class="column large-7 medium-12">
+
+                <h4 class="huge-text">
+                Have a new project in mind? Let's collaborate and build something awesome. 
+                Let's turn that idea to an even greater product :)
+                </h4>
+
+            </div>
+
+            <div class="column large-4 medium-12">
+
+                <div class="row contact-infos">
+                    <div class="column large-12 medium-6 tab-12">
+                        <div class="contact-block">
+                            <h5 class="contact-block__header">
+                                Email
+                            </h5>
+                            <p class="contact-block__content">
+                                <a class="mailtoui" href="mailto:sayhello@ceevee.com">sayhello@ceevee.com</a>
+                            </p>
+                        </div> <!-- end contact-block -->
+                    </div>
+                    <div class="column large-12 medium-6 tab-12">
+                        <div class="contact-block">
+                            <h5 class="contact-block__header">
+                                Phone
+                            </h5>
+                            <p class="contact-block__content">
+                                <a href="tel:+1975432345">+197 543 2345</a>
+                            </p>
+                        </div> <!-- end contact-block -->
+                    </div>
+
+                    <div class="column large-12">
+                        <a href="mailto:sayhello@ceevee.com" class="mailtoui btn btn--primary h-full-width">Let's Talk</a>
+                    </div>
+                </div> <!-- end contact-infos -->
+
+            </div>
+        </div> <!-- s-contact__content -->
+
+    </section> <!-- end s-contact -->
+    
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row">
+            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
+                <ul class="s-footer__social">
+                    <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
+                <span>© Copyright Ceevee 2021</span> 
+                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
+             </a>
+        </div> <!-- end ss-go-top -->
+    </footer>
 
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
+</html>

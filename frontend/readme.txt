@@ -2,11 +2,10 @@
 
 DESCRIPTION:
 
-ETHOS is a modern and elegant one-page free resume website template. A perfect tool that would 
-help you craft a personal website where you can advertise yourself showcasing your skills, 
-talents, portfolio, and work experiences. It provides you the necessary website elements 
-and features for creating an impressive and beautiful online resume that would capture 
-everyone's attention.
+CEEVEE is a clean, modern, fully responsive site template designed for online resume and portfolio. 
+With this template, you can easily introduce yourself and showcase your works to future clients 
+and employers. Also, it is flexible and easy to customize so you even use this template as 
+a creative, business or portfolio site for your company.
 
 ==================================================================================================
 
@@ -70,20 +69,21 @@ Also, keep your Paypal receipt as proof of payment and your good to go.
 
 SUPPORT:
     
-Since ETHOS is distributed for free, support is not offered. ETHOS is coded according 
+Since CEEVEE is distributed for free, support is not offered. CEEVEE is coded according 
 to current web standards and we did our best to make the template easy to use and modify.
 If you have minimum web development experience, you can easily modify the template. 
 However, If you're still new to HTML and CSS, I suggest that you visit the 
 following tutorials:
 
- - https://webdesign.tutsplus.com/courses/30-days-to-learn-html-css
+ - https://marksheet.io/
  - http://learn.shayhowe.com/html-css/
 
 These will teach you the essentials of HTML and CSS. In addition, if you want to include
-jQuery in your skill-set, you can also check out these tutorials: 
+javascript in your skill-set, you can also check out these tutorials: 
 
- - https://code.tutsplus.com/courses/30-days-to-learn-jquery
- - http://try.jquery.com/
+ - https://www.codecademy.com/learn/introduction-to-javascript
+ - https://javascript.info/
+
 
 
 ------------------------------------------------------------------------------------------------------ 
@@ -104,23 +104,23 @@ SOURCES AND CREDITS:
 I've used the following resources as listed.
 
 Fonts:
- - Martel Font (https://fonts.google.com/specimen/Martel)
- - Gothis A1 Font (https://fonts.google.com/specimen/Gothic+A1) 
- - Work Sans Font (https://fonts.google.com/specimen/Work+Sans)
+ - Inter Font (https://fonts.google.com/specimen/Inter)
+ - IBM Plex Serif Font (https://fonts.google.com/specimen/IBM+Plex+Serif)
 
 Icons:
- - Iconmonstr (https://iconmonstr.com/)
+ - Boxicons (https://boxicons.com/)
+ - FontAwesome (https://fontawesome.com/)
 
 Stock Photos and Graphics:
  - Unsplash.com (https://unsplash.com/)
  
 Javascript Files:
- - JQuery (http://jquery.com/)
- - Modernizr (http://modernizr.com/)
- - PhotoSwipe (https://photoswipe.com/)
- - Slick slider (http://kenwheeler.github.io/slick/)
- - Animate On Scroll (https://michalsnik.github.io/aos/)
- - Code Prettify (https://github.com/google/code-prettify)
+ - Rellax.js (https://dixonandmoe.com/rellax/)
+ - Swiper (https://swiperjs.com/)
+ - Jump.js (https://github.com/callmecavs/jump.js)
+ - Prism.js (https://prismjs.com/)
+ - Basic Lightbox (https://basiclightbox.electerious.com/)
+ - MailtoUI (https://mailtoui.com/)
 
 -------------------------------------------------------------------------------------------------------
 

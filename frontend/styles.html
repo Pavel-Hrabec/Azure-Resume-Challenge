@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Ethos - Styles</title>
+    <title>Styles - Ceevee 2.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -15,21 +15,24 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/vendor.css">
 
     <style type="text/css" media="screen">
         .s-styles { 
-            padding-top: 16rem;
-            padding-bottom: 16rem;
-            background-color: #ffffff;
+            background-color: white;
+            padding-top: calc(4.5 * var(--space));
+            padding-bottom: calc(4.5 * var(--space));
+            position: relative;
+        }
+        .s-styles .intro h1 {
+            margin-top: 0;
         }
     </style>
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
+    <script defer src="js/vendor/fontawesome/all.min.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -40,113 +43,106 @@
 
 </head>
 
-<body id="top">
+<body id="top" class="ss-preload">
 
 
     <!-- preloader
     ================================================== -->
     <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <div id="loader"></div>
     </div>
 
 
     <!-- header
     ================================================== -->
     <header class="s-header">
-
-        <div class="header-logo">
-            <a href="index.html">
-                <img src="images/logo.svg" alt="Homepage">
-            </a>
-        </div>
-
-        <div class="header-content">
-    
-            <nav class="row header-nav-wrap">
-                <ul class="header-nav">
-                    <li><a href="index.html#hero" title="Intro">Home</a></li>
-                    <li><a href="index.html#about" title="About">About</a></li>
-                    <li><a href="index.html#services" title="Services">Services</a></li>
-                    <li><a href="index.html#portfolio" title="Works">Works</a></li>
-                    <li><a href="mailto:#0" title="Contact us">Say Hello</a></li>
+        <div class="row s-header__nav-wrap">
+            <nav class="s-header__nav">
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#resume">Resume</a></li>
+                    <li><a href="index.html#portfolio">Works</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Say Hello</a></li>
                 </ul>
-            </nav> <!-- end header-nav-wrap -->
-
-            <a href="#0" class="btn btn--stroke btn--small">Download CV</a>
-
-        </div> <!-- end header-content -->
-
-        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
-
-    </header> 
+            </nav>
+        </div> <!-- end row -->
+        
+        <a class="s-header__menu-toggle" href="#0" title="Menu">
+            <span class="s-header__menu-icon"></span>
+        </a>
+    </header> <!-- end s-header -->
 
 
     <!-- hero
     ================================================== -->
-    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg-3000.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="hero" class="s-hero target-section">
 
-        <div class="row hero-content">
+        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
 
-            <div class="column large-full">
+        <div class="row s-hero__content">
+            <div class="column">
 
-                <h1>
-                Hello, I'm John Doe, <br>
-                a frontend developer <br>
-                & designer currently <br>
-                based somewhere.
-                </h1>
+                <div class="s-hero__content-about">
 
-                <ul class="hero-social">
-                    <li>
-                        <a href="#0" title="">Twitter</a>
-                    </li>
-                    <li>
-                        <a href="#0" title="">Behance</a>
-                    </li>
-                    <li>
-                        <a href="#0" title="">Dribbble</a>
-                    </li>
-                </ul> <!-- end hero-social -->
+                    <h1>I'm Jonathan Doe.</h1>
 
-            </div> 
+                    <h3>
+                    I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
+                    effective visual identities for companies of all sizes around the globe. Let's <a href="#about">start scrolling</a>
+                    and learn more <a href="#about">about me</a>.
+                    </h3>
 
-        </div> <!-- end hero-content -->
+                    <div class="s-hero__content-social">
+                        <a href="#0"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i></a>
+                        <a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
 
-        <div class="hero-scroll">
-            <a href="#styles" class="scroll-link smoothscroll">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 24l-8-9h6v-15h4v15h6z"/></svg>
+                </div> <!-- end s-hero__content-about -->
+
+            </div>
+        </div> <!-- s-hero__content -->
+
+        <div class="s-hero__scroll">
+            <a href="#styles" class="s-hero__scroll-link smoothscroll">
+                <span class="scroll-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
             </a>
-        </div> <!-- end hero-scroll -->
+        </div> <!-- s-hero__scroll -->
 
     </section> <!-- end s-hero -->
 
 
-    <!-- styles
+    <!-- s-styles
     ================================================== -->
-    <section id="styles" class="s-styles page-content">
+    <section id="styles" class="s-styles">
 
-        <div class="row add-bottom">
+        <div class="row">
 
-            <div class="column large-full">
+            <div class="column large-12 intro">
 
-                <h1 class="display-1">Style Guide.</h1>
+                <h1>Style Guide.</h1>
 
                 <p class="lead">Lorem ipsum Officia elit ad tempor dolore est ex incididunt incididunt occaecat culpa deserunt 
                 sunt labore in cillum ullamco magna in Excepteur consequat in reprehenderit proident mollit incididunt officia commodo.
                 Duis ea officia sed dolor pariatur enim dolore dolore quis incididunt nulla exercitation commodo veniam et ea incididunt.
                 </p>
 
+                <hr class="fancy">
             </div>
 
-        </div>
+        </div> <!-- end row -->
 
         <div class="row">
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
                 <h3>Paragraph and Image</h3>
 
@@ -174,7 +170,7 @@
 
             </div>
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
                 <h3>Drop Caps</h3>
 
@@ -189,9 +185,7 @@
 
                 <h3>Small Print</h3>
 
-                <p>Buy one widget, get one free!
-                <small>(While supplies last. Offer expires on the vernal equinox. Not valid in Ohio.)</small>
-                </p>
+                <p><small>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero.</small></p>
 
             </div>
 
@@ -199,27 +193,37 @@
 
         <div class="row">
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
-                <h3>Pull Quotes</h3>
+                <h3 class="h-add-bottom">Pull Quotes</h3>
 
-                <aside class="pull-quote">
+                <p>
+                Perspiciatis nemo unde et nobis modi consequatur officia amet. Ut enim 
+                tenetur provident maiores. Perspiciatis asperiores incidunt sequi 
+                quisquam. Enim aut. 
+                </p>
+
+                <figure class="pull-quote">
                     <blockquote>
-                    <p>
-                    When you look in the eyes of grace, when you meet grace, 
-                    when you embrace grace, when you see the nail prints in 
-                    grace’s hands and the fire in his eyes, when you feel his 
-                    relentless love for you - it will not motivate you to sin. 
-                    It will motivate you to righteousness.
-                    </p>
+                        <p>
+                        When you look in the eyes of grace, when you meet grace, 
+                        when you embrace grace, when you see the nail prints in 
+                        grace’s hands and the fire in his eyes, when you feel his 
+                        relentless love for you - it will not motivate you to sin. 
+                        It will motivate you to righteousness.
+                        </p>
+
+                        <footer>
+                            <cite>Judah Smith</cite>
+                        </footer>
                     </blockquote>
-                </aside>
+                </figure>
 
             </div>
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
-                <h3>Block Quotes</h3>
+                <h3 class="h-add-bottom">Block Quotes</h3>
 
                 <blockquote cite="http://where-i-got-my-info-from.com">
                     <p>
@@ -228,24 +232,32 @@
                     the world to condemn the world, but in order that the world might be 
                     saved through him.
                     </p>
-                    <cite>
-                        <a href="#0">John 3:16-17 ESV</a>
-                    </cite>
+
+                    <footer>
+                        <cite>
+                            <a href="#0">John 3:16-17 ESV</a>
+                        </cite>
+                    </footer>
+
                 </blockquote>
 
                 <blockquote>
-                <p>There is a God-shaped vacuum in the heart of each man which cannot be satisfied 
-                by any created thing but only by God the Creator.</p>
-                <cite>Blaise Pascal</cite>
+                    <p>There is a God-shaped vacuum in the heart of each man which cannot be satisfied 
+                    by any created thing but only by God the Creator.</p>
+
+                    <footer>
+                        <cite>Blaise Pascal</cite>
+                    </footer>
+
                 </blockquote>
 
             </div>
 
         </div> <!-- end row -->
 
-        <div class="row half-bottom">
+        <div class="row h-add-half-bottom">
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
                 <h3>Example Lists</h3>
 
@@ -271,7 +283,7 @@
 
                 <h5>a) Multi-line Definitions (default) </h5>
 
-                <dl>
+                <dl class="dictionary-style">
                     <dt><strong>This is a term</strong></dt>
                         <dd>this is the definition of that term, which both live in a <code>dl</code>.</dd>
                     <dt><strong>Another Term</strong></dt>
@@ -279,11 +291,40 @@
                         <dd>This is a 2<sup>nd</sup> definition for a single term. A <code>dt</code> may be followed by multiple <code>dd</code>s.</dd>
                 </dl>
 
+                <h3 class="h-add-bottom">Skill Bars</h3>
+
+                <ul class="skill-bars-fat">
+                    <li>
+                    <div class="progress percent85"></div>
+                    <strong>HTML</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent85"></div>
+                    <strong>CSS</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent65"></div>
+                    <strong>Javascript</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent90"></div>
+                    <strong>Figma</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent75"></div>
+                    <strong>Illustrator</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent60"></div>
+                    <strong>Photoshop</strong>
+                    </li>
+                </ul>
+
             </div>
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
-                <h3>Buttons</h3>
+                <h3 class="h-add-bottom">Buttons</h3>
 
                 <p>
                     <a class="btn btn--primary h-full-width" href="#0">Primary Button</a>
@@ -291,42 +332,38 @@
                     <a class="btn btn--stroke h-full-width" href="#0">Stroke Button</a>
                 </p>
 
-                <h3>Skill Bars</h3>
-                
-                <ul class="skill-bars">
-                    <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong>HTML5</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent85"><span>85%</span></div>
-                    <strong>CSS3</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent70"><span>70%</span></div>
-                    <strong>JQuery</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent95"><span>95%</span></div>
-                    <strong>PHP</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent75"><span>75%</span></div>
-                    <strong>Wordpress</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong>Angular JS</strong>
-                    </li>
+                <h3>Stats Tabs</h3>
+
+                <ul class="stats-tabs">
+                    <li><a href="#0">1,234 <em>Peter</em></a></li>
+                    <li><a href="#0">567 <em>James</em></a></li>
+                    <li><a href="#0">23,456 <em>John</em></a></li>
+                    <li><a href="#0">3,456 <em>Andrew</em></a></li>
+                    <li><a href="#0">456 <em>Philip</em></a></li>
+                    <li><a href="#0">26 <em>Matthew</em></a></li>
                 </ul>
+
+                <h3 class="h-add-bottom">Code</h3>
+
+<pre><code class="language-css">
+    code {
+    font-size: 1.4rem;
+    margin: 0 .2rem;
+    padding: .2rem .6rem;
+    white-space: nowrap;
+    background: #F1F1F1;
+    border: 1px solid #E1E1E1;	
+    border-radius: 3px;
+    }
+</code></pre>
 
             </div>
 
         </div> <!-- end row -->
 
-        <div class="row half-bottom">
+        <div class="row h-add-half-bottom">
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
                     
                 <h1>H1 Heading</h1>
                 <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
@@ -340,10 +377,10 @@
                 <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
 
+                
             </div>
 
-            <div class="column large-6 tab-full">
-                    
+            <div class="column large-6 tab-12">
                 <h4>H4 Heading</h4>
                 <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
@@ -355,75 +392,46 @@
                 <h6>H6 Heading</h6>
                 <p>Doloremque dolor voluptas est sequi omnis. Pariatur ut aut. Sed enim tempora qui veniam qui cum vel. 
                 Voluptas odit at vitae minima. In assumenda ut. Voluptatem totam impedit accusantium reiciendis excepturi aut qui accusamus praesentium.</p>
-
-            </div>
-
-        </div> <!-- end row -->
-
-        <div class="row half-bottom">
-
-            <div class="column large-6 tab-full">
-
-                <h3>Stats Tabs</h3>
-
-                <ul class="stats-tabs">
-                    <li><a href="#">1,234 <em>Peter</em></a></li>
-                    <li><a href="#">567 <em>James</em></a></li>
-                    <li><a href="#">23,456 <em>John</em></a></li>
-                    <li><a href="#">3,456 <em>Andrew</em></a></li>
-                    <li><a href="#">456 <em>Philip</em></a></li>
-                    <li><a href="#">26 <em>Matthew</em></a></li>
-                </ul>
-
-            </div>
-
-            <div class="column large-6 tab-full">
-            <h3>Code Block</h3>
     
-<pre><code>
-code {
-font-size: 1.4rem;
-margin: 0 .2rem;
-padding: .2rem .6rem;
-white-space: nowrap;
-background: #F1F1F1;
-border: 1px solid #E1E1E1;	
-border-radius: 3px;
-}
-</code></pre>
-
+                
             </div>
 
         </div> <!-- end row -->
 
-        <div class="row half-bottom">
+        <div class="row h-add-half-bottom">
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
-                <h3>Responsive Image</h3>
-                <p><img src="images/wheel-500.jpg" 
+                <h3 class="h-add-bottom">Responsive Image</h3>
+
+                <figure>
+                    <img src="images/wheel-500.jpg" 
                     srcset="images/wheel-1000.jpg 1000w, 
                     images/wheel-500.jpg 500w" 
                     sizes="(max-width: 1000px) 100vw, 1000px" alt="">
-                </p>
+
+                    <figcaption>
+                        Here is some random picture.
+                    </figcaption>
+                </figure>
 
             </div>
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
-                <h3>Responsive video</h3>
+                <h3 class="h-add-bottom">Responsive video</h3>
 
                 <div class="video-container">
-                <iframe src="https://player.vimeo.com/video/14592941?color=00a650&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+                <iframe title="vimeo-player" src="https://player.vimeo.com/video/14592941" width="640" height="360" frameborder="0" allowfullscreen></iframe>                
                 </div>
 
             </div>
             
         </div> <!-- end row -->
 
-        <div class="row add-bottom">
+        <div class="row h-add-bottom">
 
-            <div class="column large-full">
+            <div class="column large-12">
 
                 <h3>Tables</h3>
                 <p>Be sure to use properly formed table markup with <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> when building a <code>table</code>.</p>
@@ -463,9 +471,40 @@ border-radius: 3px;
 
         <div class="row">
 
-            <div class="column large-6 tab-full">
+            <div class="column large-12">
+                <h3>Pagination</h3>
 
-                <h3>Form Styles</h3>
+                <nav class="pgn">
+                    <ul>
+                        <li>
+                            <a class="pgn__prev" href="#0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.707 17.293L8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"/></svg>
+                            </a>
+                        </li>
+                        <li><a class="pgn__num" href="#0">1</a></li>
+                        <li><span class="pgn__num current">2</span></li>
+                        <li><a class="pgn__num" href="#0">3</a></li>
+                        <li><a class="pgn__num" href="#0">4</a></li>
+                        <li><a class="pgn__num" href="#0">5</a></li>
+                        <li><span class="pgn__num dots">…</span></li>
+                        <li><a class="pgn__num" href="#0">8</a></li>
+                        <li>
+                            <a class="pgn__next" href="#0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div> <!-- end row -->
+
+
+        <div class="row">
+
+            <div class="column large-6 tab-12">
+
+                <h3 class="h-add-bottom">Form Styles</h3>
 
                 <form>
                     <div>
@@ -496,156 +535,267 @@ border-radius: 3px;
 
             </div>
 
-            <div class="column large-6 tab-full">
+            <div class="column large-6 tab-12">
 
                 <h3>Alert Boxes</h3>
 
                 <br>
                 
-                <div class="alert-box alert-box--error hideit">
+                <div class="alert-box alert-box--error">
                     <p>Error Message. Your Message Goes Here.</p>
-                    <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+                    <span class="alert-box__close"></span>
                 </div><!-- end error -->
                         
-                <div class="alert-box alert-box--success hideit">
+                <div class="alert-box alert-box--success">
                     <p>Success Message. Your Message Goes Here.</p>
-                    <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+                    <span class="alert-box__close"></span>
                 </div><!-- end success -->
                         
-                <div class="alert-box alert-box--info hideit">
+                <div class="alert-box alert-box--info">
                     <p>Info Message. Your Message Goes Here.</p>
-                    <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+                    <span class="alert-box__close"></span>
                 </div><!-- end info -->
                         
-                <div class="alert-box alert-box--notice hideit">
+                <div class="alert-box alert-box--notice">
                     <p>Notice Message. Your Message Goes Here.</p>
-                    <i class="fa fa-times alert-box__close" aria-hidden="true"></i>
+                    <span class="alert-box__close"></span>
                 </div><!-- end notice -->
             
             </div>
 
         </div> <!-- end row -->
 
+        <div class="row">
+
+            <div class="large-12 column">
+               <h3 class="h-add-bottom">Grid Columns Samples</h3>
+            </div>
+   
+        </div> <!-- Row End-->
+
+
+        <div class="row">
+   
+            <div class="large-4 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+             </div>
+   
+            <div class="large-4 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+            <div class="large-4 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+        </div>
+   
+        <div class="row">
+   
+            <div class="large-3 tab-6 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+            <div class="large-3 tab-6 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+            <div class="large-3 tab-6 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+            <div class="large-3 tab-6 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+        </div>
+   
+        <div class="row">
+   
+            <div class="large-6 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+            <div class="large-6 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+        </div>
+   
+        <div class="row">
+   
+            <div class="large-8 tab-7 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor.
+                </p>
+            </div>
+   
+            <div class="large-4 tab-5 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. 
+                </p>
+            </div>
+   
+         </div>
+   
+         <div class="row">
+   
+            <div class="large-3 tab-5 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at. 
+                </p>
+             </div>
+   
+            <div class="large-9 tab-7 mob-12 column">
+                <p>
+                Cras aliquet. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor.Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor. Integer faucibus, eros ac molestie placerat, enim tellus varius lacus,
+                nec dictum nunc tortor id urna. Suspendisse dapibus ullamcorper pede. Vivamus ligula ipsum,
+                faucibus at, tincidunt eget, porttitor non, dolor.
+                </p>
+             </div>
+   
+         </div> 
 
     </section> <!-- end s-styles -->
 
 
-    <!-- footer
+    <!-- contact
     ================================================== -->
-    <footer class="s-footer h-dark-bg">
-        
-        <div class="right-vert-line"></div>
+    <section id="contact" class="s-contact target-section">
 
-        <div class="row s-footer__main">
-            <div class="column large-6">
-                <div class="section-intro">
-                    <h3 class="subhead">Get In Touch</h3>
-
-                    <h1 class="display-1">
-                    Have an idea or a concept that really excite you?
-                    Let's turn that idea into reality. Shoot me a message.
-                    </h1>
-                </div>
-
-                <div class="footer-email-us">
-                    <a href="mailto:#0" class="btn btn--primary h-full-width">Let's Talk</a>
-                </div>
+        <div class="row s-contact__header">
+            <div class="column large-12">
+                <h3 class="section-header-allcaps">Say Hello</h3>
             </div>
-
-            <div class="column large-5">
-                <div class="footer-contacts">
-                    <div class="footer-contact-block">
-                        <h5 class="footer-contact-block__header">
-                            Email
-                        </h5>
-                        <p class="footer-contact-block__content">
-                            <a href="mailto:#0">sayhello@ethos.com</a>
-                        </p>
-                    </div> <!-- end footer-contact-block -->
-                    <div class="footer-contact-block">
-                        <h5 class="footer-contact-block__header">
-                            Phone
-                        </h5>
-                        <p class="footer-contact-block__content">
-                            <a href="tel:+1975432345">+197 543 2345</a>
-                        </p>
-                    </div> <!-- end footer-contact-block -->
-                    <br>
-                    <div class="footer-contact-block">
-                        <h5 class="footer-contact-block__header">
-                            Social
-                        </h5>
-                        <ul class="footer-contact-block__list">
-                            <li><a href="#0">Twitter</a></li>
-                            <li><a href="#0">Instagram</a></li>
-                            <li><a href="#0">Behance</a></li>
-                            <li><a href="#0">Dribbble</a></li>
-                        </ul>
-                    </div> <!-- end footer-contact-block -->
-                </div>
-            </div>
-        </div> <!-- end s-footer__main -->
-
-        <div class="row s-footer__bottom">
-            <div class="column large-full ss-copyright">
-                <span>© Copyright Ethos 2019</span> 
-                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
-            </div> <!-- end ss-copyright -->
-
-            <div class="ss-go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z"/></svg>
-                </a>
-            </div> <!-- end ss-go-top -->
-        </div> <!-- end s-footer__bottom -->
-
-    </footer> <!-- end s-footer -->
-
-
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                    "Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                "Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-
         </div>
 
-    </div> <!-- end photoSwipe background -->
+        <div class="row s-contact__content">
+
+            <div class="column large-7 medium-12">
+
+                <h4 class="huge-text">
+                Have a new project in mind? Let's collaborate and build something awesome. 
+                Let's turn that idea to an even greater product :)
+                </h4>
+
+            </div>
+
+            <div class="column large-4 medium-12">
+
+                <div class="row contact-infos">
+                    <div class="column large-12 medium-6 tab-12">
+                        <div class="contact-block">
+                            <h5 class="contact-block__header">
+                                Email
+                            </h5>
+                            <p class="contact-block__content">
+                                <a class="mailtoui" href="mailto:sayhello@ceevee.com">sayhello@ceevee.com</a>
+                            </p>
+                        </div> <!-- end contact-block -->
+                    </div>
+                    <div class="column large-12 medium-6 tab-12">
+                        <div class="contact-block">
+                            <h5 class="contact-block__header">
+                                Phone
+                            </h5>
+                            <p class="contact-block__content">
+                                <a href="tel:+1975432345">+197 543 2345</a>
+                            </p>
+                        </div> <!-- end contact-block -->
+                    </div>
+
+                    <div class="column large-12">
+                        <a href="mailto:sayhello@ceevee.com" class="mailtoui btn btn--primary h-full-width">Let's Talk</a>
+                    </div>
+                </div> <!-- end contact-infos -->
+
+            </div>
+        </div> <!-- s-contact__content -->
+
+    </section> <!-- end s-contact -->
+    
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row">
+            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
+                <ul class="s-footer__social">
+                    <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
+                <span>© Copyright Ceevee 2021</span> 
+                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
+             </a>
+        </div> <!-- end ss-go-top -->
+    </footer>
 
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
+</html>
