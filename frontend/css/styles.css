@@ -3201,6 +3201,13 @@ input[type="button"].btn--primary:focus {
     visibility: visible;
 }
 
+.btn--stroke,
+button.btn--stroke {
+  background: transparent !important;
+  border: 0.2rem solid #ffffff;
+  color: #ffffff;
+}
+
 /* -------------------------------------------------------------------
  * ## header nav
  * ------------------------------------------------------------------- */
