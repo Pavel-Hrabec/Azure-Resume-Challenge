@@ -3984,7 +3984,7 @@ button.btn--stroke {
  * ## portfolio list
  * ------------------------------------------------------------------- */
 .folio-list {
-    max-width: 1180px;
+    max-width: 980px;
     margin-top: var(--vspace-2_5);
 }
 
@@ -3994,6 +3994,35 @@ button.btn--stroke {
     position: relative;
     overflow: hidden;
 }
+
+.folio-item__info {
+    z-index: 2;
+    padding: 0 3rem;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: absolute;
+    left: 0;
+    top: 3.6rem;
+  }
+  
+  .folio-item__title {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 1.333;
+    margin: 0;
+  }
+  
+  .folio-item__cat {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Gothic A1", sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }  
 
 .folio-item__thumb::before {
     z-index: 1;
@@ -4068,15 +4097,17 @@ button.btn--stroke {
  * ## modal popup
  * ------------------------------------------------------------------- */
 .modal-popup {
-    max-width: 680px;
+    max-width: 480px;
+    align-self: center;
     background-color: white;
     font-size: calc(var(--text-size) * 0.9444);
-    line-height: 1.647;
+    line-height: 1.47;
     overflow-y: auto;
     position: relative;
 }
 
 .modal-popup img {
+    max-height: 500px;
     margin-bottom: var(--vspace-0_5);
 }
 
@@ -4413,7 +4444,7 @@ button.btn--stroke {
     color: white;
     margin-top: 0;
     font-weight: 400;
-    font-size: 4.6rem;
+    font-size: 3.0rem;
     line-height: 1.304;
 }
 
