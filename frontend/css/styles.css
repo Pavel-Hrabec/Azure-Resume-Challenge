@@ -3454,7 +3454,7 @@ button.btn--stroke {
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/header-bg-3000.jpg);
+    background-image: url(../images/avatars/initial\ photo.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3795,10 +3795,10 @@ button.btn--stroke {
 }
 
 .s-about__pic {
-    width: var(--vspace-5);
-    height: var(--vspace-5);
-    border: 1.6rem solid rgba(255, 255, 255, 0.02);
-    border-radius: 50%;
+    width: 24vw;
+    position: absolute;
+    top: 8rem;
+    left: calc(50% + 80px);
 }
 
 .s-about__content-bottom {
