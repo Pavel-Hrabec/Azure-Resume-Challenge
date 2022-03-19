@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) =>{ // Everytime content is 
 
 const functionApiUrl = 'https://getazresumecounter.azurewebsites.net/api/GetResCounter?code=jbHcOLlHPZaNXqe2IBaOogMvGVhTrH8QuvRHMwEv1dtg3vvue9PU8A=='
 const localfunctionApiUrl = 'http://localhost:7071/api/GetResCounter'
-const PythonApiUrl = 'https://pythoncounter.azurewebsites.net/api/PythonCounter?code=jVHT95QIzC08iLyqaV9s6OLiCs2LHxqhHJkkp8YGZNuoUYAYnHpRsw==';
+const PythonApiUrl = 'https://pythoncounter.azurewebsites.net/api/PythonCounter?code=jVHT95QIzC08iLyqaV9s6OLiCs2LHxqhHJkkp8YGZNuoUYAYnHpRsw=='
 
 const getVisitCount = () => {
     let count = 30;
