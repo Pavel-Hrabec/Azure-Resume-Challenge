@@ -69,13 +69,30 @@
 		},
 		{
 			"type": "func",
-			"dependsOn": "build (functions)",
-			"options": {
-				"cwd": "${workspaceFolder}/backend\\api/bin/Debug/net5.0"
-			},
 			"command": "host start",
+			"problemMatcher": "$func-python-watch",
 			"isBackground": true,
-			"problemMatcher": "$func-dotnet-watch"
+			"dependsOn": "pip install (functions)",
+			"options": {
+				"cwd": "${workspaceFolder}/backend\\PythonCounter"
+			}
+		},
+		{
+			"label": "pip install (functions)",
+			"type": "shell",
+			"osx": {
+				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+			},
+			"windows": {
+				"command": "${config:azureFunctions.pythonVenv}\\Scripts\\python -m pip install -r requirements.txt"
+			},
+			"linux": {
+				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+			},
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/backend\\PythonCounter"
+			}
 		}
 	]
 }

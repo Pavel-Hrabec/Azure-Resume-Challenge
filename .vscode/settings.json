@@ -1,8 +1,10 @@
 {
-    "azureFunctions.deploySubpath": "backend\\api/bin/Release/net5.0/publish",
-    "azureFunctions.projectLanguage": "C#",
-    "azureFunctions.projectRuntime": "~3",
+    "azureFunctions.deploySubpath": "backend\\PythonCounter",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
     "azureFunctions.preDeployTask": "publish (functions)",
-    "azureFunctions.projectSubpath": "backend\\api"
+    "azureFunctions.projectSubpath": "backend\\api",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv"
 }
