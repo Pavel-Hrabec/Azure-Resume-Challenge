@@ -48,4 +48,4 @@ jobs:
       id: fa
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }/test/output}
+        package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }/test/output}}
