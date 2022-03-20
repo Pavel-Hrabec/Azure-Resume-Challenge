@@ -7,7 +7,7 @@ on:
           - "backend/**"
 
 env:
-  AZURE_FUNCTIONAPP_NAME: PythonCounter # set this to your application's name
+  AZURE_FUNCTIONAPP_NAME: __init__.py # set this to your application's name
   AZURE_FUNCTIONAPP_PACKAGE_PATH: 'backend'   # set this to the path to your web app project, defaults to the repository root
   PYTHON_VERSION: '3.9'                 # set this to the Python version to use (supports 3.6, 3.7, 3.8)
 
@@ -48,4 +48,4 @@ jobs:
       id: fa
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-        package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }/test/output}}'
+        package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/test/output'
