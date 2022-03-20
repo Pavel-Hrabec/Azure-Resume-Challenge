@@ -34,12 +34,13 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/PythonCounter'
         python -m pip install --upgrade pip
         pip install -r requirements.txt --target=".python_packages/lib/site-packages"
+        pip install pytest
         popd
     - name: 'Run unit test'
       shell: bash
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/Test'
-        pytest .
+        py -m pytest .
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
       id: fa
