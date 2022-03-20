@@ -38,7 +38,7 @@ jobs:
     - name: 'Run unit test'
       shell: bash
       run: |
-        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/Test/'
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/Test'
         pytest .
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
