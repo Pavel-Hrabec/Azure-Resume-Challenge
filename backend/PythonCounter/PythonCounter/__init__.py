@@ -6,7 +6,7 @@ from azure.cosmos import CosmosClient
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
-    ### Gets variables specified from local.setting.json file 
+    # Gets variables specified from local.setting.json file 
     endpoint = os.environ["Endpoint"] 
     key = os.environ["CosmosDBConnectionString"]
     database_name = os.environ['DatabaseName']
