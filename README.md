@@ -19,7 +19,7 @@
     - Create visitor counter for the website with JavaScript and Azure’s Functions in Python
     - Store visit counts in Azure CosmosDB
     - Use API to establish communication between CosmosDB, Azure Functions and website
-    - Create unit tests for Azure’s Functions Python code
+    - Create unit tests for Azure’s Functions in Python
     - Set up GitHub Actions for CI/CD deployment
 
 # To be done <a name="next"></a>
