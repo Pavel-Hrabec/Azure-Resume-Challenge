@@ -17,7 +17,7 @@
     - Setup access to website via secure protocol HTTPS
     - Connect website to custom DNS domain name
     - Create visitor counter for the website with JavaScript and Azure’s Functions in Python
-    - Store visitor counter in Azure CosmosDB
+    - Store visit counts in Azure CosmosDB
     - Use API to establish communication between CosmosDB, Azure Functions and website
     - Create unit tests for Azure’s Functions Python code
     - Set up GitHub Actions for CI/CD deployment
