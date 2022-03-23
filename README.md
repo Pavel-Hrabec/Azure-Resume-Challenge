@@ -16,7 +16,7 @@
     - Deploy static website in Azure storage
     - Setup access to website via secure protocol HTTPS
     - Connect website to custom DNS domain name
-    - Create visitor counter for the website with JavaScript and Azure’s Functions via Python
+    - Create visitor counter for the website with JavaScript and Azure’s Functions in Python
     - Store visitor counter in Azure CosmosDB
     - Use API to establish communication between CosmosDB, Azure Functions and website
     - Create unit tests for Azure’s Functions Python code
