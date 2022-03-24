@@ -34,7 +34,7 @@ jobs:
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/test/tests'
         python -m pip install --upgrade pip
         pip install pytest
-        pip install -r requirements.txt --target=".python_packages/lib/site-packages"
+        pip install -r requirements.txt
         popd
     - name: 'Run unit test'
       shell: bash
