@@ -8,7 +8,7 @@
 5. [Deployment of Website to Azure](#DWebsiteAzure)
 6. [Building CI/CD pipeline](#CI/CD)
 
-# Project Description <a name="introduction"></a>
+# Description <a name="introduction"></a>
 
 - The Cloud Resume Challenge is a hands-on project designed to help bridge the gap from cloud certification to cloud job. It incorporates many of the skills that real cloud and DevOps engineers use in their daily work. Cloud challenge was designed by [Forrest Brazeal.](https://forrestbrazeal.com/) More information about the challenge can be found on official [website.](https://cloudresumechallenge.dev/)
 - Key objectives for the project
