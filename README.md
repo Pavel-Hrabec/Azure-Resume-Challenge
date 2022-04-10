@@ -1,6 +1,6 @@
 # Azure Cloud Resume Challenge
 
-# Table of Contents
+## Table of Contents
 1. [Project Description](#introduction)
 2. [To be done](#next)
 3. [Building Static Website](#buildsite)
@@ -8,7 +8,7 @@
 5. [Deployment of Website to Azure](#DWebsiteAzure)
 6. [Building CI/CD pipeline](#CI/CD)
 
-# Description <a name="introduction"></a>
+## Description <a name="introduction"></a>
 
 - The Cloud Resume Challenge is a hands-on project designed to help bridge the gap from cloud certification to cloud job. It incorporates many of the skills that real cloud and DevOps engineers use in their daily work. Cloud challenge was designed by [Forrest Brazeal.](https://forrestbrazeal.com/) More information about the challenge can be found on official [website.](https://cloudresumechallenge.dev/)
 - Key objectives for the project
@@ -22,13 +22,13 @@
     - Create unit tests for Azure’s Functions in Python
     - Set up GitHub Actions for CI/CD deployment
 
-# To be done <a name="next"></a>
+## To be done <a name="next"></a>
 
 - Create resume and host it in Azure’s General Purpose v2 storage
 - Create Azure Key Vault and store all secrets securely
 - Incorporate Terraform to build resources in Azure
 
-# Building Static Website <a name="buildsite"></a>
+## Building Static Website <a name="buildsite"></a>
 
 - Create project in [GitHub](https://github.com/join)
     - clone repository locally
@@ -83,7 +83,7 @@ Creation of Azure Function
         
     - Create an [HTTP trigger](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-python?tabs=asgi%2Cazurecli-linux%2Capplication-level#http-trigger-and-bindings) in your Azure Function as well as [connection to CosmosDB](https://azuresdkdocs.blob.core.windows.net/$web/python/azure-cosmos/4.2.0/index.html) to [retrieve](https://azuresdkdocs.blob.core.windows.net/$web/python/azure-cosmos/4.2.0/index.html#query-the-database) and [update](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/cosmos/azure-cosmos/samples/examples.py) data inside container
 
-# Deployment of Azure Function <a name="DAzureFunction"></a>
+## Deployment of Azure Function <a name="DAzureFunction"></a>
 
 - [Publish](https://azuresdkdocs.blob.core.windows.net/$web/python/azure-cosmos/4.2.0/index.html#query-the-database) Azure function to Azure
     - Select the same resource group as for CosmosDB
@@ -94,7 +94,7 @@ Creation of Azure Function
     - Add URL into your JavaScript code for counter
 - Enable [Cross-Origin Resource Sharing](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=portal#cors) (CORS) for you function in Azure
 
-# Deployment of Website to Azure <a name="DWebsiteAzure"></a>
+## Deployment of Website to Azure <a name="DWebsiteAzure"></a>
 
 - Install [Azure static Web Apps extension](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript#install-azure-static-web-apps-extension) for Visual Studio Code and create static web app
 - Create [Azure Content Delivery Network](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-new-endpoint) (CDN) profile and endpoint for your website
@@ -104,7 +104,7 @@ Creation of Azure Function
 - Redirect [HTTP traffic to HTTPS](https://stackoverflow.com/questions/39244265/azure-web-app-redirect-http-to-https)
 - Get your website URL and edit [CORS](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=portal#cors) for allowed origins
 
-# Building CI/CD pipeline <a name="CI/CD"></a>
+## Building CI/CD pipeline <a name="CI/CD"></a>
 
 - Create [GitHub Actions workflows](https://docs.github.com/en/actions/quickstart) (Front End for static site deployment and Back End for unit testing)
 - Generate [deployment credentials](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-static-site-github-actions?tabs=userlevel#generate-deployment-credentials) and add your workflow for static site
